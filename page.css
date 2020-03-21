@@ -1,0 +1,254 @@
+@import url(https://fonts.googleapis.com/css?family=Fjalla+One&display=swap);
+
+body{
+  background-color:black;
+}
+
+.container{
+  background-color:transparent;
+  height:80vw;
+  width:98vw;
+  display:grid;
+  grid-gap:6px;
+  grid-template-rows:81.5px 6% 1fr 220px ;
+  grid-template-columns:9vw 1fr 9vw;
+}
+.item1{
+  background-color:black;
+  grid-row:span 3;
+  overflow:hidden;
+}
+.item7{
+  background:transparent;
+  position:fixed;
+  font-family: 'Fjalla One', sans-serif;
+  padding:1%;
+  height:50px;
+  left:10%;
+  right:10%;
+  overflow:hidden;
+}
+.item2{
+  background-color:black
+}
+.item3{
+  background-color:black;
+  grid-row:span 3;
+  }
+.item4{
+  display: flex;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  border: 3px solid gray;
+  justify-content: center;
+  align-items: center;
+}
+.item5{
+  font-size:3vw;
+  padding: 10px ;
+  border: 3px solid gray;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  background-color:black;
+}
+.item6{
+  background-color:white;
+  width:100%;
+  height:100%;
+  border-top-right-radius: 160px;
+  border-top-left-radius: 160px;
+  grid-column:1/4;
+}
+.g1{
+  height:100%;
+  width:100%;
+  border-bottom-right-radius: 90px;
+  border-top-right-radius: 90px;
+  overflow:hidden;
+}
+.g2{
+  height:100%;
+  width:100%;
+  border-bottom-left-radius: 90px;
+  border-top-left-radius: 90px;
+  overflow:hidden;
+}
+.gun1{
+  height: 30vw;
+  width: 40vw;
+  margin: 50px;
+  border-radius:10px;
+  transition: box-shadow .3s;
+  background: #fff;
+}
+
+.gun1:hover{
+  height: 29.9vw;
+  width: 39.9vw;
+ box-shadow: 10px 10px 5px #aaaaaa;
+}
+.des{
+  padding-left:1vw;
+  padding-right:1vw;
+  font-size:calc(1.8vw + .8vh);
+  color:#A9A9A9;
+  font-family: 'Fjalla One', sans-serif;
+}
+a{
+  text-decoration:none;
+  color:white;
+  font-size:3vw;
+  padding-left:2%;
+}
+
+h1 {
+  position: relative;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: 3vw;
+  letter-spacing: 5px;
+  overflow: hidden;
+  background: linear-gradient(90deg, #000, #fff, #000);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animate 3s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+
+@keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
+}
+
+
+.area {
+  font-size: calc(1vw + 1vh);
+  text-align: center;
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+  animation: blur 1s ease-out infinite;
+  text-shadow: 0px 0px 5px #fff, 0px 0px 7px #fff;
+}
+
+@keyframes blur {
+  from {
+    text-shadow:0px 0px 10px #fff,
+      0px 0px 10px #fff, 
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 50px #fff,
+      0px 0px 50px #fff,
+      0px 0px 50px #7B96B8,
+      0px 0px 150px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px -10px 100px #7B96B8,
+      0px -10px 100px #7B96B8;
+  }
+}
+
+.Project {
+  position: relative;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  margin-top:115px;
+  margin-left:50%;
+  cursor: pointer;
+}
+.Project:hover .imgMasked {
+  clip-path: circle(100px at center);
+}
+.Project:hover .Project-hail {
+  width: 200px;
+  height: 200px;
+  border-radius: 200px;
+}
+.Project:hover .Project-hail2 {
+  width: 200px;
+  height: 200px;
+  border-radius: 200px;
+  border: 80px solid black;
+  opacity: 0;
+}
+.Project:hover .Project-name {
+  left: 200%;
+  opacity: 1;
+}
+.Project:hover .Project-name:before {
+  width: 100%;
+}
+.Project-hail {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  transition: 0.5s;
+  opacity: 0.2;
+}
+.Project-hail2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  border-radius: 0;
+  transition: 0.7s;
+  border: 22px solid gray;
+  border-radius: 20px;
+  pointer-events: none;
+}
+.imgMasked {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  height: 200px;
+  clip-path: circle(20px at center);
+  transition: 0.5s;
+  pointer-events: none;
+}
+.Project-name {
+  position: absolute;
+  max-width: 600px;
+  min-width: 150px;
+  left: 0;
+  top: 150%;
+  pointer-events: none;
+  transition: 0.5s;
+  color: white;
+  font-family: 'Fjalla One', sans-serif;
+  padding: 3px 6px;
+  z-index: 2;
+  opacity: 0;
+}
+.Project-name:before {
+  content: '';
+  width: 0;
+  height: 100%;
+  background-color: black;
+  font-family: 'Fjalla One', sans-serif;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.3s;
+  z-index: -1;
+}
